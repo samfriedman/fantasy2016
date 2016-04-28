@@ -1,7 +1,7 @@
 /* Globals */
-var game_pages = ["https://github.com/samfriedman/fantasy2016/raw/master/d.html",
-                  "https://github.com/samfriedman/fantasy2016/raw/master/r.html",
-                  "https://github.com/samfriedman/fantasy2016/raw/master/s.html",
+var game_pages = ["https://raw.githubusercontent.com/samfriedman/fantasy2016/master/d.html",
+                  "https://raw.githubusercontent.com/samfriedman/fantasy2016/master/r.html",
+                  "https://raw.githubusercontent.com/samfriedman/fantasy2016/master/s.html",
                   ""];
 
 var choices = new Array(4);
