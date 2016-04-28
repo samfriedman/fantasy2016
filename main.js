@@ -1,5 +1,8 @@
 /* Globals */
-var game_pages = ["http://codepen.io/samfriedman/pen/XXpgrX.html", "http://codepen.io/samfriedman/pen/MKJoQe.html", "http://codepen.io/samfriedman/pen/JXjqyy.html", ""];
+var game_pages = ["https://github.com/samfriedman/fantasy2016/raw/master/d.html",
+                  "https://github.com/samfriedman/fantasy2016/raw/master/r.html",
+                  "https://github.com/samfriedman/fantasy2016/raw/master/s.html",
+                  ""];
 
 var choices = new Array(4);
 for (i = 0; i < 4; i++) {
