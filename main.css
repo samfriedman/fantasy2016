@@ -1,0 +1,322 @@
+/* style.scss */
+@import "compass";
+
+@-webkit-keyframes pulse {
+  from { -webkit-box-shadow: 0 0 0px 0 white; }
+  6% { -webkit-box-shadow: 0 0 18px 3px #e50a2b; }
+  12% { -webkit-box-shadow: 0 0 0px 0 white; }
+  18% { -webkit-box-shadow: 0 0 18px 3px #e50a2b; }
+  24% { -webkit-box-shadow: 0 0 0px 0 white; }
+  to { -webkit-box-shadow: 0 0 0px 0 white; }
+}
+
+@-webkit-keyframes candPulse {
+  from { -webkit-box-shadow: 0 0 0px 0 #0050a0; }
+  50% { -webkit-box-shadow: 0 0 18px 3px white; }
+  to { -webkit-box-shadow: 0 0 0px 0 #0050a0; }
+}
+
+.cand-pic {
+  padding: 0px;
+}
+
+.cand-name {
+  padding-right: 0px;
+}
+
+.my-idx {
+  //border: 1px solid red;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: horizontal;
+  justify-content: center;
+  min-height: 400px;
+  //min-width: px;
+}
+
+.summary-main {
+  display: block;
+  margin:auto;
+  //justify-content: center;
+
+}
+
+.summaries-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: horizontal;
+  justify-content: center;
+
+}
+
+.main-container {
+  max-width: 906px;
+  margin: auto;
+  //border: 1px solid yellow;
+}
+
+.game-part {
+  //border: 1px solid blue;
+  max-width: 190px;
+  text-align: center;
+  margin-left: 10px;
+  margin-right: 10px;
+  &.selected {
+    color: black;
+    font-weight: bold;
+    border-bottom: 2px solid #e50a2b;
+  }
+}
+
+.game-menu {
+  //border: 1px solid orange;
+  display: flex;
+  flex-direction: horizontal;
+  justify-content: center;
+  cursor: default;//pointer;
+  overflow: auto;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.cand-bio-top-row {
+  //border: 1px solid green;
+  display: flex;
+  align-items: center;
+  padding-top: 5px;
+  //flex: 1;
+}
+
+.cand-bio-pic {
+  img {
+    display: block;
+    margin: auto;
+  }
+  //border: 1px solid red;
+  flex: 1;
+}
+
+.cand-bio-basics {
+  flex: 2;
+  hr {
+    //margin: 0;
+  }
+  h2 {
+    margin: 0;
+  }
+}
+
+.cand-stances {
+  flex: 1;
+  padding: 10px;
+  //border: 1px solid red;
+  margin-top: auto;
+  margin-bottom: 0;
+  ul {
+    padding-left: 20px;
+    margin-top: 5px;
+  }
+}
+
+.primaries {
+  tr {
+    display: block;
+    td, th {
+      min-width: 150px;
+    }
+  }
+  caption {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: black;
+  }
+  position: relative;
+  min-height: 400px;
+  //min-width: 650px;
+  z-index: 2;
+  th {
+    color: black;
+  }
+  @include transition(opacity 0.4s linear);
+  //transition-delay: 0.2s;
+}
+
+.candidates-body tr {
+  td {
+    //border: 1px solid red;
+  }
+  //outline: 1px solid red;
+  cursor: pointer;
+  @include transition(background-color .1s linear, color .1s linear);
+}
+
+.primaries-body {
+  &:not(.summary) {
+    tr {
+      &:not(.past) {
+        &.startPulse {
+          -webkit-animation-name: pulse;
+          -webkit-animation-duration: 5s;
+          -webkit-animation-iteration-count: infinite;
+        }
+        &:hover:not(.selected) {
+          cursor: pointer;
+          outline: 1px solid #fb9dab;
+        }
+      }
+    }
+  }
+  tr {
+    &:not(.past) {
+      color: black;
+      font-weight: 500;
+    }
+    cursor: default;
+    @include transition(background-color .1s linear, color .1s linear);
+  }
+
+  .selected {
+    outline: 2px solid #e50a2b;
+  }
+
+  img {
+    display: block;
+    height: 42px;
+    width: 42px;
+    margin: 0 auto;
+  }
+}
+
+.summary-header {
+  text-align: center;
+  flex-basis: 500px;
+}
+
+.summary {
+  tr:nth-child(even) {
+    //background: LightGray;
+  }
+
+  .past {
+    img {
+      -webkit-filter: grayscale(80%);
+    }
+  }
+}
+
+.summary-header {
+  .summary-title {
+    color: #3268AE;
+    font-weight: 600;
+    font-size: 2em;
+  }
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.democrats {
+  margin-top: 20px;
+  margin-right: 10px;
+  th {
+    border-bottom: 2px solid #0050a0;
+  }
+
+}
+
+.republicans {
+  margin-top: 20px;
+  margin-left: 10px;
+  th {
+    border-bottom: 2px solid #e50a2b;
+  }
+}
+
+.candidates-body {
+  display:block;
+  &.startPulse {
+    -webkit-animation-name: candPulse;
+    -webkit-animation-duration: 0.60s;
+    -webkit-animation-iteration-count: 2;
+  }
+  .selected {
+    background: white;
+    color: black;
+  }
+}
+
+.candidates-table {
+    width: 100%;
+}
+
+.candidates-container {
+  img {
+    height: 42px;
+    width: 42px;
+    display: block;
+  }
+  //flex: 1;
+  padding: 0;
+  background: #0050a0;
+  border: 1px solid #0050a0;
+  vertical-align: top;
+  color: white;
+  //border: 1px solid red;
+}
+
+.cand-bio-wrapper {
+  //z-index: 3;
+  position: absolute;
+  top: 0;
+  left: -1px;
+  @include transition(opacity 0.4s linear);
+  //transition-delay: 0.2s;
+  background-color: white;
+  border: 1px solid #5c83AA;
+  opacity: 0;
+  //border: 1px solid green;
+}
+
+.cand-bio {
+  //background-color: white;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+table {
+  border-spacing: 0;
+  text-align: center;
+}
+
+h4 {
+  color: black;
+  display: inline;
+}
+
+td, th {
+  max-width: 90px;
+  min-width: 70px;
+  height: 42px;
+  padding: 10px;
+}
+
+.cand-bios {
+  position: relative;
+  margin-left: 0px;
+  //border: 1px solid #5c83AA;
+}
+
+.button-container {
+  //border: 1px solid blue;
+  padding-top: 40px;
+  text-align:center;
+}
+
+.disabled {
+  background-color: grey !important;
+  cursor: default !important;
+  &:hover {
+    opacity: 1 !important;
+  }
+}
