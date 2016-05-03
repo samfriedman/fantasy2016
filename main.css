@@ -35,8 +35,11 @@
   margin: 0 auto;
   margin-bottom: 40px;
   width: 600px;
-  color: black;
   text-align: center;
+}
+
+.title h2 {
+  color: black;
 }
 
 .cand-pic {
