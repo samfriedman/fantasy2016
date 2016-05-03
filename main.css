@@ -33,9 +33,9 @@
 
 .title {
   margin: 0 auto;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
   width: 600px;
-  border: 1px red solid;
+  color: black;
   text-align: center;
 }
 
