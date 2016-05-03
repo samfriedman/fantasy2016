@@ -30,6 +30,15 @@
     -webkit-box-shadow: 0 0 0px 0 #0050a0;
   }
 }
+
+.title {
+  margin: 0 auto;
+  margin-bottom: 20px;
+  width: 600px;
+  border: 1px red solid;
+  text-align: center;
+}
+
 .cand-pic {
   padding: 0px;
 }
