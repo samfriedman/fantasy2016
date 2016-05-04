@@ -316,14 +316,12 @@ td, th {
     height: 434px;
     display: flex;
     margin: 0 auto;
-    border: 1px solid black;
 }
 
 .game-panel__candidate-selection__left-panel, .game-panel__candidate-selection__right-panel {
-    display: flex;
-    flex: 1 1 50%;
-    justify-content: center;
-    
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
 }
 
 .game-panel__candidate-selection__select {
