@@ -318,13 +318,3 @@ td, th {
     margin: 0 auto;
     border: 1px solid black;
 }
-
-.game-panel__candidate-selection__left-panel, .game-panel__candidate-selection__left-panel {
-    flex: 1 1 50%;
-    display: flex;
-    justify-content: center;
-}
-
-.game-panel__candidate-selection__left-panel__candidate-name, .game-panel__candidate-selection__left-panel__candidate-name {
-    font-size: 0.5em;
-}
