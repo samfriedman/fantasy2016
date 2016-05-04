@@ -329,4 +329,22 @@ td, th {
     color: white;
     border-radius: 4px 4px 4px 4px;
     background-color: #0050a0;
+    margin: 30px 0px;
+}
+
+.game-panel__candidate-selection__select {
+    padding: 10px 35px;
+    color: white;
+    border-radius: 4px 4px 4px 4px;
+    background-color: #0050a0;
+    margin: 30px 0px;
+}
+
+.game-panel__candidate-selection__learn-more {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.game-panel__candidate-selection__left-panel__candidate-image, .game-panel__candidate-selection__left-panel__candidate-image{
+    margin-top: 30px;
 }
