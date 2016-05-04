@@ -310,3 +310,11 @@ td, th {
 .disabled:hover {
   opacity: 1 !important;
 }
+
+.game-panel__candidate-selection {
+    width:720px;
+    height: 434px;
+    display: flex;
+    margin: 0 auto;
+    border: 1px solid black;
+}
